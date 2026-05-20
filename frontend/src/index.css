@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --maroon: #7D1128;
+  --maroon-dark: #531019;
+  --maroon-deep: #330A10;
+  --maroon-mid: #9E1633;
+  --maroon-light: #B91C3A;
+  --maroon-pale: #F9EEF1;
+  --maroon-muted: #EDD0D7;
+  --gold: #B8860B;
+  --gold-light: #D4A017;
+  --gold-pale: #FFF8E7;
+  --cream: #FAFAF8;
+  --cream-mid: #F4F2EE;
+  --text-dark: #1C0A0E;
+  --text-mid: #3D1520;
+  --text-muted: #7A4555;
+  --text-light: #A8707E;
+  --white: #FFFFFF;
+  --border: #E8D5DA;
+  --shadow-sm: 0 1px 4px rgba(125,17,40,0.08);
+  --shadow-md: 0 4px 20px rgba(125,17,40,0.12);
+  --shadow-lg: 0 12px 40px rgba(125,17,40,0.18);
+  --radius: 12px;
+  --radius-lg: 18px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--text-dark);
+}
+
+input, select, textarea, button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--maroon-muted); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--maroon); }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.fade-in-up { animation: fadeInUp 0.45s ease forwards; }
+.fade-in    { animation: fadeIn 0.3s ease forwards; }
