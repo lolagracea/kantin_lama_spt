@@ -11,6 +11,32 @@ Proyek ini adalah aplikasi web pemesanan dan antrian cerdas untuk kantin, terdir
 - Node.js 18+ dan npm
 - `pip` untuk instalasi package Python
 
+## Setup PostgreSQL
+
+Proyek ini menggunakan PostgreSQL sebagai database utama untuk menyimpan data menu, stok, pesanan, detail pesanan, dan hasil prediksi.
+
+### 1. Buat Database
+
+Buka PostgreSQL melalui pgAdmin, DBeaver, atau terminal `psql`, lalu buat database baru:
+
+```sql
+CREATE DATABASE smart_canteen_itdel;
+```
+
+dengan:
+
+- Host : localhost
+- Port : 5432
+- User : postgres
+- Password : sesuaikan dengan password PostgreSQL lokal
+- Database : smart_canteen_itdel
+
+Dan buat file `.env` menggunakan template `.env.template` dengan isi:
+
+```env
+DATABASE_URL=postgresql://postgres:password_kamu@localhost:5432/smart_canteen_itdel
+```
+
 ## Jalankan Backend
 
 1. Buka terminal di folder `backend/`:
